@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courier Tracking</title>
+    <style>
+        /* Reset some basic styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #4facfe, #00f2fe);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        p {
+            margin-bottom: 30px;
+            color: #e0f7fa;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            border: none;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #f44336;
+            color: white;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #d32f2f;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 1.5rem;
+        }
+
+        footer {
+            margin-top: 40px;
+            color: #e0f7fa;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Courier Tracking System</h1>
+        <p>Enter your tracking ID to track your order:</p>
+        <input type="text" id="trackingID" placeholder="Enter Tracking ID" />
+        <button onclick="trackOrder()">Track</button>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Courier Services | All rights reserved.</p>
+    </footer>
+
+    <script>
+        function trackOrder() {
+            const trackingID = document.getElementById("trackingID").value;
+            const resultDiv = document.getElementById("result");
+
+            if (trackingID) {
+                // Simulate tracking logic (this is just a placeholder)
+                resultDiv.textContent = "Tracking details for ID: " + trackingID + " - Your order is in transit.";
+            } else {
+                resultDiv.textContent = "Please enter a valid Tracking ID.";
+            }
+        }
+    </script>
+
+</body>
+</html>
